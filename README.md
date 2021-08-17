@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Type Racing Game
+## Stack
+- Express.js
+- Node.js
+- MongoDB
+- Socket-io
+- React/Nextjs
 
-## Getting Started
+## Logic Explanation
+The root index.js contains the Node Express server which starts a socket-io instance. 
 
-First, run the development server:
+There is a Nextjs (sub framework of React) app which builds the client code which will allow client socket instances to connect to each other. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+/pages/online contains most of the game JSX code, as well as integrated chat which utilizes the same socket as the game. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Most logic is done serverside and clients are just listening to socket events from the server for game state updates. 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+As well as emitting their own updates when game progress is made through typing. 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Hosting
+I first attempted to host the service on Vercel since I did find capabilites for Express servers on Vercel through certain configuration specification. 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+However, Vercel is made for serverless or static hosting and there was timeout issues and socket based apps are not viable on the Vercel platform. 
 
-## Learn More
+I then moved to a Heroku deploy which works perfectly. 
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The only limitation is that the app sleeps after inactivity and requires some wake time after sleeping. 
