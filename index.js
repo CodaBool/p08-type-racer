@@ -7,6 +7,14 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+// convert to full express
+// const express = require('express')
+const cors = require('cors')
+// const app = express()
+
+// middleware
+app.use(cors())
+
 // const id = crypto.randomBytes(20).toString('hex')
 // console.log('id', id)
 // super useful change
@@ -23,6 +31,10 @@ mongoose.connect(process.env.MONGO_URI,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => console.log('Successfully connected to database')
 )
+
+// app.get('/', (req, res) => {
+//   res.json({ msg: 'This is the testing route 🧪🧪' })
+// })
 
 app.prepare().then(() => {
   const server = createServer((req, res) => {
