@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "deploy": "next build && next export",
     "start": "cross-env NODE_ENV=production node index.js"
   },
   "dependencies": {

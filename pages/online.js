@@ -33,6 +33,10 @@ export default function index() {
   const [error, setError] = useState(null)
   
   useEffect(() => {
+    if (!localStorage.getItem('name')) {
+      router.push('/')
+    }
+
     socket.on('updateGame', (game) => {
       // console.log('update game', game)
       setGame(game)

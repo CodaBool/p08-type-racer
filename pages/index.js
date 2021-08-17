@@ -1,19 +1,3 @@
-// import React from 'react'
-
-// export default function index() {
-//   if (typeof window !== "undefined") {
-//     console.log(localStorage)
-//     // localStorage.setItem(key, value)
-//   }
-//   return (
-//     <div>
-//       wow
-//     </div>
-//   )
-// }
-
-
-
 import Button from 'react-bootstrap/Button'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Modal from 'react-bootstrap/Modal'
