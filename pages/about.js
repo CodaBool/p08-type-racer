@@ -37,7 +37,7 @@ export default function About() {
               <dd className="d-inline">- MongoDB </dd><span className="text-muted"> (Database)</span><br />
             </ul>
             <Row>
-              <p className="text-muted mx-auto" style={{fontSize: '1.1rem'}}>Read More at <a href="https://codabool.com">CodaBool.com</a></p>
+              <p className="text-muted ms-5" style={{fontSize: '1.1rem'}}>Read More at <a href="https://codabool.com">CodaBool.com</a></p>
             </Row>
           </Col>
         </Row>
