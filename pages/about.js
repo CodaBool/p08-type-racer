@@ -41,6 +41,16 @@ export default function About() {
             </Row>
           </Col>
         </Row>
+        <Row>
+          <Col md={6}>
+            <h2 className="mt-5">Credit 🎨</h2>
+            <p style={{fontSize: '1.1rem'}}>
+              &emsp;The art at the title page is video recording of a JavaScript keyboard written by Matthew Nau.
+              Which was originally inspired by Reddit user zhengc. All the details can be read about in the README page of matthewnau keyboard repo 
+              <a href="https://github.com/matthewnau/keyboard"> github.com</a>
+            </p>
+          </Col>
+        </Row>
       </Container>
     </>
   )
