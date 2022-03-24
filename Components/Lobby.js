@@ -57,7 +57,7 @@ export default function Lobby({ game }) {
         <Overlay target={codeBtn.current} show={show} placement="top">
           {props => (
             <Tooltip id="overlay" {...props}>
-              Share Code copied to clipboard!
+              Share Code {game._id} copied to clipboard! 
             </Tooltip>
           )}
         </Overlay>
