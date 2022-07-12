@@ -3,3 +3,4 @@ out/
 build/
 .next/
 .env
+junk*.*
