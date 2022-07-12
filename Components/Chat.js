@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Spinner from 'react-bootstrap/Spinner'
-import { socket } from '../constants'
+import socket from '../constants'
 
 export default function Chat({ game }) {
   const [messages, setMessages] = useState([])

@@ -19,7 +19,6 @@ const mongoose = require('mongoose')
 const Game = require('./Models/Game')
 const allData = require( './constants/data.json')
 mongoose.connect(process.env.MONGO_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true },
   () => console.log('Successfully connected to database')
 )
 

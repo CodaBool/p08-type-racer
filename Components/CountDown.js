@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { socket } from '../constants'
+import socket from '../constants'
 
 export default function CountDown() {
   const [countDown, setCountDown] = useState('')

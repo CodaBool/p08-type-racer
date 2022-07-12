@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Overlay from 'react-bootstrap/Overlay'
 import Tooltip from 'react-bootstrap/Tooltip'
 import StartBtn from './StartBtn'
-import { socket } from '../constants'
+import socket from '../constants'
 
 function getPlayer(players) {
   if (!players) return null

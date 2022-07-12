@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { socket } from '../constants'
+import socket from '../constants'
 import Card from 'react-bootstrap/Card'
 
 export default function Stats({ game, winnerSocket, setWinnerSocket }) {

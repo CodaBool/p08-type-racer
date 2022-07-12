@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Modal from 'react-bootstrap/Modal'
-import { socket } from '../constants'
+import socket from '../constants'
 
 export default function Game({ game }) {
   const [input, setInput] = useState('')

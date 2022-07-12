@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Spinner from 'react-bootstrap/Spinner'
 import Col from 'react-bootstrap/Col'
@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Game from '../Components/Game'
 import Lobby from '../Components/Lobby'
-import { socket } from '../constants'
+import socket from '../constants'
 import Cars from '../Components/Cars'
 import Chat from '../Components/Chat'
 import CountDown from '../Components/CountDown'
@@ -25,7 +25,7 @@ const Loading = ({ msg }) => (
 
 let gameID = ''
 
-export default function index() {
+export default function Online() {
   const router = useRouter()
   const [game, setGame] = useState({ _id: '', isOpen: false, isStarted: false, players: [] })
   const [gameStarted, setGameStarted] = useState(false)

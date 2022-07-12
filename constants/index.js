@@ -30,4 +30,4 @@ export function timer(func, wait, immediate) {
   }
 }
 
-export const socket = io(process.env.REACT_APP_SOCKET_DOMAIN)
+export default io(process.env.REACT_APP_SOCKET_DOMAIN)

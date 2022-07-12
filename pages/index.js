@@ -5,7 +5,7 @@ import Popover from 'react-bootstrap/Popover'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 export default function Menu() {
@@ -73,9 +73,9 @@ export default function Menu() {
   }
 
   const popover = (
-    <Popover>
-      <Popover.Title as="h3" className="text-center">Join or Create</Popover.Title>
-      <Popover.Content>
+    <Popover id="popover-basic">
+      <Popover.Header as="h3" className="text-center">Join or Create</Popover.Header>
+      <Popover.Body>
         &emsp;Join a room which someone has already created and provided you a 6 character code for to join
         <Form.Control className="my-1" value={gameID} placeholder="6 Character Code" onChange={handleCode} />
         {error && <p className="text-danger text-center">{error}</p>}
@@ -83,7 +83,7 @@ export default function Menu() {
         <hr />
         &emsp;Create a new room which generates a 6 character code for you to provide to another player to join
         <Button onClick={createGame} disabled={error || name.length == 0} className="w-100 mt-3">Create New Room</Button>
-      </Popover.Content>
+      </Popover.Body>
     </Popover>
   )
 

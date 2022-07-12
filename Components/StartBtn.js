@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { socket } from '../constants'
+import socket from '../constants'
 import Button from 'react-bootstrap/Button'
 
 export default function StartBtn({ player, game }) {
