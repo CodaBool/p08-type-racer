@@ -473,3 +473,5 @@ function calculateWPM(endTime, startTime, player, words, finished) {
   const WPM = Math.floor(numOfWords/ timeInMinutes)
   return WPM
 }
+
+module.exports = app

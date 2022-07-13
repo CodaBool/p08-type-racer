@@ -7,7 +7,7 @@
     "build": "next build",
     "export": "next export",
     "deploy": "next build && next export",
-    "start": "NODE_ENV=production npm run deploy && node index.js",
+    "start": "node index.js",
     "local": "concurrently \"next dev -p 8080\" \"node index.js\"",
     "windows-server": "cross-env NODE_ENV=production npm run deploy && node index.js"
   },
