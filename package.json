@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "deploy": "next export",
     "start": "node index.js",
     "local": "concurrently \"next dev -p 8080\" \"node index.js\"",
