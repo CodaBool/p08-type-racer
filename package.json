@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "ls && next build && next export && ls",
     "start": "node index.js",
     "local": "concurrently \"next dev -p 8080\" \"node index.js\"",
     "windows-server": "cross-env NODE_ENV=production npm run deploy && node index.js"
