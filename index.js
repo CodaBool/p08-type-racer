@@ -24,22 +24,27 @@ mongoose.connect(process.env.MONGO_URI,
 
 const path = require('path')
 
-app.use('/', express.static(path.join(__dirname, 'out')))
-
-// app.use(express.static('public'))
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './out/index.html'))
+  res.sendFile('index.html')
 })
-app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, './out/about.html'))
-})
-app.get('/online', (req, res) => {
-  res.sendFile(path.join(__dirname, './out/online.html'))
-})
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, './out/404.html'))
-})
+
+// app.use('/', express.static(path.join(__dirname, 'out')))
+// // app.use(express.static('public'))
+
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, './out/index.html'))
+// })
+// app.get('/about', (req, res) => {
+//   res.sendFile(path.join(__dirname, './out/about.html'))
+// })
+// app.get('/online', (req, res) => {
+//   res.sendFile(path.join(__dirname, './out/online.html'))
+// })
+// app.get('/*', (req, res) => {
+//   res.sendFile(path.join(__dirname, './out/404.html'))
+// })
 
 io.on('connection', async (socket) => {
   var gameTime = null
