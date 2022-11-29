@@ -21,15 +21,8 @@ As well as emitting their own updates when game progress is made through typing.
 ### Node 17+
 use cross-env NODE_OPTIONS=--openssl-legacy-provider to avoid nextjs crypto package error
 
-# 🏴‍☠️ Hello TampaDevs!
-This is repo is part of a tech talk
-
-### 🚧 More info here later
-📎CodaBool.com
-
-🐦 @Coda_Bool
-
-____________________________________
+# New Deployment
+I used to have this on Heroku but now switched this to onRender.com
 
 # Presentation Notes
 > HINT: did you create the .env and terraform2/terraform.tfvars file
