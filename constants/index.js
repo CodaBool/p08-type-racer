@@ -1,5 +1,7 @@
 import io from 'socket.io-client'
 
+export const cid = Math.random().toString(16).slice(2)
+
 export function debounce(func, wait, immediate) {
   var timeout
   return function () {
@@ -30,4 +32,6 @@ export function timer(func, wait, immediate) {
   }
 }
 
-export const socket = io(process.env.REACT_APP_SOCKET_DOMAIN)
+export const socket = io(import.meta.env.VITE_SOCKET_URL, {
+  transports: ["websocket"]
+})

@@ -1,11 +1,13 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const PlayerSchema = new mongoose.Schema({
   percent: {type: Number, default: 0},
   givenUp: {type: Boolean, default: false},
-  WPM: {type: Number, default: -1},
+  wpm: {type: Number, default: -1},
   name: {type: String},
-  socketID: {type: String},
+  room: {type: String},
+  cid: {type: String},
+  sid: {type: String},
   isLeader: {type: Boolean, default: false},
   isWinner: {type: Boolean, default: false},
   wins: {type: Number, default: 0},
@@ -31,4 +33,4 @@ const GameSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Game', GameSchema)
+export default mongoose.model('Game', GameSchema)
