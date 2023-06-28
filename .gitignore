@@ -1,0 +1,10 @@
+node_modules/
+build/
+out/
+.next/
+.terraform/
+tmp/
+.env
+junk.*
+.terraform.lock.hcl
+.air.toml
