@@ -1,5 +1,7 @@
 # Type Racing Game
 
+> [play now](https://type.codabool.com)
+
 ## Database
 - Mongodb
 
