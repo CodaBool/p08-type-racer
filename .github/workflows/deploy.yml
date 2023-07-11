@@ -1,0 +1,17 @@
+on:
+  push:
+    branchs: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: GuillaumeFalourd/copy-push-files@v1
+        with:
+          source_files: typer.mjs game.js data.js
+          remote_repository: https://github.com/codabool/sock
+          target_branch: main
+          access_token: ${{ secrets.ACCESS_TOKEN }}
+          commit_message: auto push ${RUN_NUMBER}
+        env:
+          RUN_NUMBER: ${{ toJSON(github.run_number) }}

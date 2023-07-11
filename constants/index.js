@@ -1,5 +1,11 @@
 import io from 'socket.io-client'
 
+export const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:3000'
+
+export const socket = io(SOCKET_URL, {
+  path: "/typer"
+})
+
 export const cid = Math.random().toString(16).slice(2)
 
 export function debounce(func, wait, immediate) {
@@ -32,6 +38,3 @@ export function timer(func, wait, immediate) {
   }
 }
 
-export const socket = io(import.meta.env.VITE_SOCKET_URL, {
-  transports: ["websocket"]
-})
