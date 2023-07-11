@@ -2,6 +2,10 @@
 
 > [play now](https://type.codabool.com)
 
+
+#  🖊️ Details
+> a blog post about how this was made can be found [here](https://codabool.com/blog/15)
+
 ## Database
 - Mongodb
 
