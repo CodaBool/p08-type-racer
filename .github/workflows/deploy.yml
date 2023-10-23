@@ -1,6 +1,7 @@
 on:
   push:
-    branchs: [never]
+    branches:
+      - never
 jobs:
   deploy:
     runs-on: ubuntu-latest
