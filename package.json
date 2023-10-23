@@ -6,6 +6,7 @@
   "scripts": {
     "client": "vite",
     "server": "nodemon ./typer.mjs localhost 10000",
+    "server:80": "node typer.mjs",
     "start": "conc \"vite\" \"nodemon ./typer.mjs localhost 3000\"",
     "host": "vite --host",
     "build": "vite build",

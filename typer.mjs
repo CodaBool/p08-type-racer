@@ -9,6 +9,7 @@ import Game from './game.js'
 import {data as allData} from "./data.js"
 
 const port = process.env.PORT || 10000
+console.log("listening on", port)
 const ROOM_CHAR_SIZE = 6
 const httpServer = createServer()
 const io = new Server(httpServer, {
