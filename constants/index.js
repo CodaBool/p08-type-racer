@@ -3,7 +3,10 @@ import io from 'socket.io-client'
 export const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:3000'
 
 export const socket = io(SOCKET_URL, {
-  path: "/typer"
+  path: "/socket.io"
+  // wow holy molly mongo atlas does not allow for ipv6
+  // you want me to pay $33/month to create vpc peering!? 💀
+  // path: "/typer"
 })
 
 export const cid = Math.random().toString(16).slice(2)

@@ -1,6 +1,6 @@
-# on:
-#   push:
-#     branchs: [main]
+on:
+  push:
+    branchs: [never]
 # jobs:
 #   deploy:
 #     runs-on: ubuntu-latest
