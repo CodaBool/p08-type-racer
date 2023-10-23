@@ -8,7 +8,7 @@ import Game from './game.js'
 // just using js export for now
 import {data as allData} from "./data.js"
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 10000
 const ROOM_CHAR_SIZE = 6
 const httpServer = createServer()
 const io = new Server(httpServer, {

@@ -5,7 +5,7 @@
   "author": "codabool",
   "scripts": {
     "client": "vite",
-    "server": "nodemon ./typer.mjs localhost 80",
+    "server": "nodemon ./typer.mjs localhost 10000",
     "start": "conc \"vite\" \"nodemon ./typer.mjs localhost 3000\"",
     "host": "vite --host",
     "build": "vite build",
