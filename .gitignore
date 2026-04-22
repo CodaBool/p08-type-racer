@@ -8,3 +8,4 @@ tmp/
 junk.*
 .terraform.lock.hcl
 .air.toml
+dist/
